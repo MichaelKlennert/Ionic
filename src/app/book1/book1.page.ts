@@ -19,13 +19,24 @@ export class ListPage implements OnInit {
     'bluetooth',
     'build'
   ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
+  public coverPage = {
+    title: "Book Title (Cover Page)",
+    url: "/coverpage"
+  };
+
+  public toc = {
+    title: "Table of Contents",
+    url: "/toc"
+  };
+
+  public items: Array<{ title: string; note: string; icon: string, url: string }> = [];
   constructor() {
     for (let i = 1; i < 11; i++) {
       this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
+        title: 'Chapter ' + i,
+        note: 'Chapter ' + i + ' is about ...',
+        icon: this.icons[Math.floor(Math.random() * this.icons.length)],
+        url: "/chapter" + i
       });
     }
   }
