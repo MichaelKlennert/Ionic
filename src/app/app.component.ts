@@ -17,7 +17,7 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Book#1',
+      title: 'The Book of Esther',
       url: '/book1',
       icon: 'list'
     }

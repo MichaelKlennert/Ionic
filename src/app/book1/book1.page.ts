@@ -6,19 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['book1.page.scss']
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
+
   public coverPage = {
     title: "Book Title (Cover Page)",
     url: "/coverpage"
@@ -31,12 +19,25 @@ export class ListPage implements OnInit {
 
   public items: Array<{ title: string; note: string; icon: string, url: string }> = [];
   constructor() {
-    for (let i = 1; i < 11; i++) {
+    this.items.push({
+      title: "Cover Page",
+      note: "Cover Page",
+      icon: "eye",
+      url: "/coverpage"
+    });
+    console.log(this.items);
+    this.items.push({
+      title: "Table of Contents",
+      note: "Table of Contents",
+      icon: "list",
+      url: "/toc"
+    });
+    for (let i = 3; i < 11; i++) {
       this.items.push({
-        title: 'Chapter ' + i,
-        note: 'Chapter ' + i + ' is about ...',
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)],
-        url: "/chapter" + i
+        title: 'Chapter ' + (i - 2),
+        note: 'Chapter ' + (i - 2) + ' is about ...',
+        icon: "book",
+        url: "/chapter" + (i - 2)
       });
     }
   }
