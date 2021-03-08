@@ -17,25 +17,22 @@ export class ListPage implements OnInit {
     url: "/toc"
   };
 
-  public items: Array<{ title: string; note: string; icon: string, url: string }> = [];
+  public items: Array<{ title: string; icon: string, url: string }> = [];
   constructor() {
     this.items.push({
       title: "Cover Page",
-      note: "Cover Page",
-      icon: "eye",
+      icon: "finger-print",
       url: "/coverpage"
     });
     console.log(this.items);
     this.items.push({
       title: "Table of Contents",
-      note: "Table of Contents",
       icon: "list",
       url: "/toc"
     });
     for (let i = 3; i < 13; i++) {
       this.items.push({
         title: 'Chapter ' + (i - 2),
-        note: 'Chapter ' + (i - 2) + ' is about ...',
         icon: "book",
         url: "/chapter" + (i - 2)
       });
