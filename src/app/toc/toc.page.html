@@ -8,11 +8,11 @@
   <ion-list>
     <ion-item *ngFor="let item of items">
       <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      <ion-item [routerDirection]="'root'" [routerLink]="['{items.url}]">
-        {{items.title}}
+      <ion-item [routerDirection]="'root'" [routerLink]="['{item.url}']">
+        {{item.title}}
       </ion-item>
       <ion-item class="item-note" slot="end">
-        {{items.note}}
+        {{item.note}}
       </ion-item>
     </ion-item>
   </ion-list>

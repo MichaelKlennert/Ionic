@@ -32,7 +32,7 @@ export class ListPage implements OnInit {
       icon: "list",
       url: "/toc"
     });
-    for (let i = 3; i < 11; i++) {
+    for (let i = 3; i < 13; i++) {
       this.items.push({
         title: 'Chapter ' + (i - 2),
         note: 'Chapter ' + (i - 2) + ' is about ...',
