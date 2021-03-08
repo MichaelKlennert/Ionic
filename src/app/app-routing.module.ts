@@ -14,7 +14,8 @@ const routes: Routes = [
   {
     path: 'book1',
     loadChildren: () => import('./book1/book1.module').then(m => m.ListPageModule)
-  },  { path: 'coverpage', loadChildren: './coverpage/coverpage.module#CoverpagePageModule' },
+  },
+  { path: 'coverpage', loadChildren: './coverpage/coverpage.module#CoverpagePageModule' },
   { path: 'toc', loadChildren: './toc/toc.module#TocPageModule' },
   { path: 'chapter1', loadChildren: './chapter1/chapter1.module#Chapter1PageModule' },
   { path: 'chapter2', loadChildren: './chapter2/chapter2.module#Chapter2PageModule' }
